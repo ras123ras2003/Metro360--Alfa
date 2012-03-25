@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 
 public class HomeActivity extends Activity {
 
+	//test for second
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
