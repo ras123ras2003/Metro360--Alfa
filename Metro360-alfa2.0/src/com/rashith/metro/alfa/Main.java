@@ -11,6 +11,7 @@ import android.view.WindowManager;
 public class Main extends Activity {
 	/** Called when the activity is first created. */
 
+	//hollo
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
