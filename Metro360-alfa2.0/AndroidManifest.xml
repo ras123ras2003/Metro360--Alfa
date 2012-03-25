@@ -24,7 +24,8 @@
         <activity
             android:name=".LoginActivity"
             android:label="Login"
-            android:screenOrientation="sensorPortait" >
+            android:screenOrientation="sensorPortait"
+            android:noHistory="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
