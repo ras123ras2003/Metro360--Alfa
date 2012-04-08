@@ -1,5 +1,7 @@
 package com.rashith.metro.alfa;
 
+import com.rashith.metro.alfa.metaio.GPSLocationBasedActivity;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,6 +26,21 @@ public class HomeActivity extends Activity {
 				Intent intent = new Intent(HomeActivity.this,
 						RashARActivity.class);
 				startActivity(intent);
+			}
+		});
+
+		final ImageButton metaio = (ImageButton) findViewById(R.id.imageButton2);
+		metaio.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				try {
+					Intent intent = new Intent(HomeActivity.this,
+							GPSLocationBasedActivity.class);
+					startActivity(intent);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 			}
 		});
 	}

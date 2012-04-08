@@ -7,7 +7,7 @@
  *
  */
 
-package com.rashith.metro.metaio;
+package com.rashith.metro.alfa.metaio;
 
 import android.util.Log;
 

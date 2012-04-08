@@ -14,6 +14,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:debuggable="true"
@@ -52,6 +53,11 @@
         </activity>
         <activity
             android:name=".RashARActivity"
+            android:label="AR View"
+            android:screenOrientation="sensorLandscape" >
+        </activity>
+        <activity
+            android:name=".metaio.GPSLocationBasedActivity"
             android:label="AR View"
             android:screenOrientation="sensorLandscape" >
         </activity>

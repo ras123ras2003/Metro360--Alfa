@@ -7,7 +7,7 @@
 
  */
 
-package com.rashith.metro.metaio;
+package com.rashith.metro.alfa.metaio;
 
 import java.io.FileNotFoundException;
 
@@ -211,7 +211,7 @@ public abstract class ARViewActivity extends Activity implements
 			// If GUI view is inflated, add it
 			if (mGUIView != null) {
 				addContentView(mGUIView, new LayoutParams(
-						LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
+						LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 				mGUIView.bringToFront();
 			}
 
