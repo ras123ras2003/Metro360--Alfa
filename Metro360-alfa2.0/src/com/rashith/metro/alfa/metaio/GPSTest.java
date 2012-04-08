@@ -30,7 +30,7 @@ import com.metaio.unifeye.ndk.Vector3d;
  * @author arsalan.malik, tim.oppermann
  * 
  */
-public class GPSLocationBasedActivity extends ARViewActivity implements UnifeyeSensorsManager.Callback 
+public class GPSTest extends ARViewActivity implements UnifeyeSensorsManager.Callback 
 {
 	/**
 	 * The billboard group, collecting all billboards

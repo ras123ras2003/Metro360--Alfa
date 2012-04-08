@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<TrackingData>
+    <Sensors>
+        <Sensor type="GPSCompassSensorSource">
+            <SensorID>Android</SensorID>
+            <Parameters />
+            <SensorCOS>
+                <SensorCosID>Android1</SensorCosID>
+            </SensorCOS>
+        </Sensor>
+    </Sensors>
+    <Connections>
+        <COS>
+            <Name>GPSCos1</Name>
+			<Fuser type="SmoothingFuser">
+				<Parameters>
+					<!-- Alpha is in the range [0...1] and determines how strong a new pose is.
+				  alpha = 0.9: less smoothing
+				  alpha = 0.1: alot smoothing-->
+					<AlphaRotation>0.7</AlphaRotation> 
+					<AlphaTranslation>0.9</AlphaTranslation>
+					<!-- if we lose tracking, keep the old pose for several frames -->
+					<KeepPoseForNumberOfFrames>0</KeepPoseForNumberOfFrames>
+				</Parameters>
+			</Fuser>
+            <SensorSource trigger="1">
+                <SensorID>Android</SensorID>
+                <SensorCosID>Android1</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+    </Connections>
+</TrackingData>

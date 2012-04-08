@@ -4,6 +4,6 @@
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
-	<classpathentry kind="lib" path="C:/Program Files (x86)/metaio/metaio Mobile SDK - 3.1.0/SDK_Android/libraries/libs/lib/metaioMobileSDK.jar"/>
+	<classpathentry kind="lib" path="libs/metaioMobileSDK.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
