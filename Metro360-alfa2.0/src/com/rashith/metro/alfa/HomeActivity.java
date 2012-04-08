@@ -11,13 +11,15 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class HomeActivity extends Activity {
 
 	// test for second
 
+	private volatile boolean got = false;
+	private volatile String x;
 	private EditText ed;
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -55,19 +57,30 @@ public class HomeActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-
+				
+				if(got)
+				{
+					ed.setText(x);
+					
+				}
+				
 				new Thread() {
 
 					public void run() {
 
-						String x = WebCall.getPlaces(10);
+						x = WebCall.getPlaces(10);
 						if (x != null) {
 							Log.d("Metro360°", x);
-							ed.setText(x);
+							//Toast.makeText(HomeActivity.this, "Got results", Toast.LENGTH_LONG).show();
+							got = true;
+						}else{
+							Log.d("Metro360°", "String is null");
 						}
 
 					}
 				}.start();
+				
+				
 			}
 		});
 	}
