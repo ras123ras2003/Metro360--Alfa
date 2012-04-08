@@ -1,4 +1,8 @@
+//new
+
 package ARKit;
+
+
 
 import java.util.Enumeration;
 import java.util.Vector;
@@ -55,7 +59,7 @@ public class ARLayout extends View implements LocationListener,
 
 	float acVal[], mgVal[] = null;
 	double prvX = 0.0f;
-
+	public static float corection = 155;
 	public ARLayout(Context context) {
 		super(context);
 		ctx = context;
@@ -168,10 +172,10 @@ public class ARLayout extends View implements LocationListener,
 				// x += 60;
 
 				x += 180;
-				if (x >= 120)
-					x -= 120;
+				if (x >= corection)
+					x -= corection;
 				else
-					x = (x - 120) + 360;
+					x = (x - corection) + 360;
 
 				direction =(float) x;
 				

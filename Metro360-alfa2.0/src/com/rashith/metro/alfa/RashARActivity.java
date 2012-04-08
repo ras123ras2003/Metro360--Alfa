@@ -106,14 +106,14 @@ public class RashARActivity extends Activity {
 		setContentView(rl);
 
 		Location location = new Location("Test");
-		location.setLatitude(6.9698);
-		location.setLongitude(79.9094);
+		location.setLatitude(6.58);
+		location.setLongitude(79.54);
 		location.setAccuracy(0.1F);
 		location.setAltitude(0);
 		
 		//SLIIT
-		location.setLatitude(6.914780);
-		location.setLongitude(79.973013);
+		//location.setLatitude(6.914780);
+		//location.setLongitude(79.973013);
 
 		ar.curLocation = location;
 		rePoplulate(location);
@@ -165,7 +165,17 @@ public class RashARActivity extends Activity {
 	public void rePoplulate(Location location) {
 		if (ar != null) {
 			ar.clearARViews();
-
+			
+			
+			Location pLoc = new Location("pns");
+			pLoc.setLatitude(6.971889);
+			pLoc.setLongitude(79.909967);
+			//pLoc.setAltitude(0);
+			MyPoint pns = new MyPoint(ctx, location, pLoc, "pns");
+			pns.distance = 20;
+			ar.addARView(pns);
+			
+/*
 			Location pLoc = new Location("pns");
 			pLoc.setLatitude(6.91493);
 			pLoc.setLongitude(79.97195);
@@ -216,7 +226,7 @@ public class RashARActivity extends Activity {
 			sapugas2.azimuth = 249;
 			sapugas2.distance = 2000;
 			ar.addARView(sapugas2);
-			
+			*/
 
 			ar.postInvalidate();
 		}
